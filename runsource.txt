@@ -1,0 +1,3 @@
+C:\home\kali\Desktop\Flask> source ./venv/bin/activate 
+                                                                             
+C:\home\kali\Desktop\Flask> python server.py
