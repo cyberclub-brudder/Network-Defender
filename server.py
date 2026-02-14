@@ -80,6 +80,14 @@ def get_packets():
 
 if __name__ == '__main__':
     # Run packet capture in a background thread
+    
+    
+    
+    #TODO: Filter packets so you only capture traffic going from the Raspberry Pi to the router
+    #Before we run the filter lets make sure the rasberry Pi has a static IP
+    #and we set a DHCP Reservation on the router.
+    #bpf_filter="src host 192.X.X.X and dst host 192.X.X.X" <- add this to sniff_thread arg
+    
     sniff_thread = threading.Thread(target=start_sniffing, args=("eth0",), daemon=True)
     sniff_thread.start()
     
